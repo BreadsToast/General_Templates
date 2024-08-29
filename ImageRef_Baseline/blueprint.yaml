@@ -68,7 +68,7 @@ resources:
       cloudConfig: |
         #cloud-config
         set_hostname: ${input.hostname}
-        fqdn: ${(input.hostname)+".pso.vmw-sddc.lab"}
+        fqdn: ${(input.hostname)+"****"}
         users:
         - default
         - name: ${input.accountName}
@@ -81,7 +81,6 @@ resources:
           expire: False
 
         runcmd: 
-          - mkdir -p /tmp/test-dir
           - eject
       attachedDisks:
         - source: ${resource.Cloud_vSphere_Disk_1.id}
