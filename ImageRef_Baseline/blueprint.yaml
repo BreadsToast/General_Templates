@@ -68,7 +68,7 @@ resources:
       cloudConfig: |
         #cloud-config
         set_hostname: ${input.hostname}
-        fqdn: ${(input.hostname)+"****"}
+        fqdn: ${(input.hostname)+"domain"}
         users:
         - default
         - name: ${input.accountName}
